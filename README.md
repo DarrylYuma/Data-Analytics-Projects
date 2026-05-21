@@ -1,4 +1,4 @@
-# Excel-Dashboard-Project
+# Excel Dashboard Project
 Excel Project where I clean the dataset, create a pivot table, and finally create a dashboard.
 # Data Cleaning
 The first step for data cleaning is to remove duplicates. Next, I create filters for every column to check for things like typos or inconsistent formatting. In this dataset, both marital status and gender have "M" as a value. To avoid confusion in the data visualization phase, abbreviations are changed to "Single" or "Married", and "Male" or "Female". The next thing that can be done is to create age brackets to make the final data visualization graph less cluttered.
