@@ -12,3 +12,5 @@ The dashboard for this project is comprised of the 3 afformentioned pivot tables
 1. Marital Status
 2. Region
 3. Education
+
+<img align="center" width="577" height="413" alt="image" src="https://github.com/user-attachments/assets/f02486cf-acf5-4ae2-8cd3-08d325e4b289" />
