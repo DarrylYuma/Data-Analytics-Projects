@@ -1,16 +1,11 @@
 # Excel Dashboard Project
-Excel Project where I clean the dataset, create a pivot table, and finally create a dashboard.
-# Data Cleaning
-The first step for data cleaning is to remove duplicates. Next, I create filters for every column to check for things like typos or inconsistent formatting. In this dataset, both marital status and gender have "M" as a value. To avoid confusion in the data visualization phase, abbreviations are changed to "Single" or "Married", and "Male" or "Female". The next thing that can be done is to create age brackets to make the final data visualization graph less cluttered.
-# Pivot Tables
-For this project, 3 different pivot tables are created:
-1. Average Income per Purchase based on gender
-2. Count of Purchased Bikes based on Commute Distance
-3. Count of Purchased Bikes based on Age Brackets
-# Dashboard
-The dashboard for this project is comprised of the 3 afformentioned pivot tables and also 3 added slicers. Slicers used in this project are:
-1. Marital Status
-2. Region
-3. Education
+Repository for all my Excel Projects where I clean the dataset, create pivot tables, and finally create a dashboard.
+# List of Projects
+1. [Bike Sales Analysis](https://github.com/DarrylYuma/Excel-Data-Analysis-Projects/tree/main/Bike%20Sales%20Dashboard)
+2. [Adidas US Sales Analysis](https://github.com/DarrylYuma/Excel-Data-Analysis-Projects/tree/main/Adidas%20US%20Sales%20Analysis)
 
-<img align="center" width="577" height="413" alt="image" src="https://github.com/user-attachments/assets/f02486cf-acf5-4ae2-8cd3-08d325e4b289" />
+# Bike Sales Analysis
+Analysis and dashboard creation built on a bike shop sales dataset. Analyses include average income per purchase, count of purchased bikes based on customer age brackets, and count of purchased bikes based on customer commute with filters by marital status, region, and education.
+
+# Adidas US Sales Analysis
+Analysis and dashboard creation built on a mock dataset of US Sales by Adidas. Analyses include sales trend over time, revenue per retailer, sales per region, and sales per sales method with filters by product, region, and year.
