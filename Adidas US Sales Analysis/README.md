@@ -3,6 +3,7 @@
 
 # Adidas US Sales Analysis
 This project is an analysis and dashboard visualization built using a mock dataset of sales in the US by the brand Adidas. The dataset is first cleaned and then a dashboard is created that produced the following visualizations:
+- KPI Cards of total sales, operating profits, and units sold.
 - Sales Trend Over Time: A line graph that shows sales performance over time, allowing comparison of sales between different products and different regions.
 - Revenue per Retailer: A combo chart that showcases the total sales and operating profit for each retailer, allowing for easy visualization of which retailer is performing and contributing the most revenue.
 - Sales per Region: A map chart that showcases regional performance of sales.
