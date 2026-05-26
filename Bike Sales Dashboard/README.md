@@ -1,5 +1,5 @@
 # Dashboard
-<img width="1381" alt="Dashboard Image" src="https://github.com/DarrylYuma/Excel-Data-Analysis-Projects/blob/main/Adidas%20US%20Sales%20Analysis/Adidas%20US%20Sales%20Dashboard.png">
+<img width="1381" alt="Dashboard Image" src="https://github.com/DarrylYuma/Excel-Data-Analysis-Projects/blob/main/Bike%20Sales%20Dashboard/Bike%20Sales%20Dashboard.png">
 
 # Bikes Sales Analysis
 This project is an analysis and dashboard visualization built using a mock dataset of sales in the US by the brand Adidas. The dataset is first cleaned and then a dashboard is created that produced the following visualizations:
