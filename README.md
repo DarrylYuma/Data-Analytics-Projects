@@ -1,5 +1,5 @@
-# Excel Dashboard Projects
-Repository for all my Excel Projects where I clean the dataset, create pivot tables, and finally create a dashboard.
+# Excel Data Analysis Projects
+Repository for all my Excel Data Analysis Projects.
 # List of Projects
 1. [Adidas US Sales Analysis](https://github.com/DarrylYuma/Excel-Data-Analysis-Projects/tree/main/Adidas%20US%20Sales%20Analysis)
 2. [Bike Sales Analysis](https://github.com/DarrylYuma/Excel-Data-Analysis-Projects/tree/main/Bike%20Sales%20Dashboard)
