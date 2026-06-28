@@ -51,7 +51,7 @@ This project investigates what drives sales revenue and profitability for Adidas
 
 ## Dashboard
 
-The Power BI dashboard includes the following visualizations, all slicer-enabled for filtering by Product, Sales Method, and Month:
+The Tableau dashboard includes the following visualizations, all slicer-enabled for filtering by Product, Sales Method, and Month:
 
 - **KPI Cards** - Total Sales, Operating Profit, Profit Margin, and Units Sold with year-over-year deltas
 - **Region Revenue / Margin** - Combo chart of sales volume and profit margin by region
