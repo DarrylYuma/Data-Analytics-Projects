@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="Adidas.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1670"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="Sales" custom_title="0" dock_id="1" table="4,5:mainSales"/><dock_state state="000000ff00000000fd0000000100000002000004f000000307fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000004f00000011100ffffff000004f00000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Sales" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="2" mode="0"/></sort><column_widths><column index="1" value="109"/><column index="2" value="82"/><column index="3" value="92"/><column index="4" value="78"/><column index="5" value="101"/><column index="6" value="101"/><column index="7" value="202"/><column index="9" value="77"/><column index="10" value="81"/><column index="11" value="112"/><column index="12" value="122"/><column index="13" value="97"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="Question 1">SELECT
+	Product,
+	ROUND(SUM(Total_Sales), 2) AS Product_Total,
+	ROUND((100*SUM(Total_Sales))/(SELECT SUM(Total_Sales) FROM Sales), 2) AS Contribution_Percent
+FROM
+	Sales
+GROUP BY
+	Product
+ORDER BY
+	Product_Total DESC
+</sql><sql name="Question 2">WITH metrics AS
+(SELECT
+	Product,
+	SUM(Units_Sold) AS total_units_sold,
+	SUM(Operating_Profit) AS product_total_profit
+FROM 
+	Sales
+GROUP BY 
+	Product)
+SELECT
+    Product,
+    ROUND(product_total_profit / total_units_sold, 2) AS profit_per_unit
+FROM 
+	metrics
+ORDER BY 
+	profit_per_unit DESC
+</sql><sql name="Question 3">SELECT
+	Region,
+	ROUND(SUM(Total_Sales), 2) AS Region_Total,
+	ROUND((100.0*SUM(Total_Sales))/(SELECT SUM(Total_Sales) FROM Sales), 2) AS Contribution_Percent
+FROM
+	Sales
+GROUP BY
+	Region
+ORDER BY
+	Region_Total DESC
+</sql><sql name="Question 4*">WITH yearly_metrics AS(
+SELECT
+	SUM(CASE WHEN strftime('%Y', Invoice_Date) = '2020' THEN Total_Sales ELSE 0 END) AS sales_2020,
+	SUM(CASE WHEN strftime('%Y', Invoice_Date) = '2021' THEN Total_Sales ELSE 0 END) AS sales_2021,
+	SUM(CASE WHEN strftime('%Y', Invoice_Date) = '2020' THEN Operating_Profit ELSE 0 END) AS profit_2020,
+	SUM(CASE WHEN strftime('%Y', Invoice_Date) = '2021' THEN Operating_Profit ELSE 0 END) AS profit_2021
+FROM
+	Sales
+)
+SELECT
+	sales_2020,
+	sales_2021,
+	profit_2020,
+	profit_2021,
+	ROUND((100.0 * (sales_2021 - sales_2020) / sales_2020),2) AS Sales_YoY_Growth,
+	ROUND((100 * (profit_2021 - profit_2020) / profit_2020),2) AS Profit_YoY_Growth
+FROM
+	yearly_metrics
+	
+</sql><sql name="Question 5">WITH metrics AS
+(SELECT
+	Product,
+	SUM(Units_Sold) AS total_units_sold,
+	SUM(Operating_Profit) AS product_total_profit,
+	ROUND(SUM(Operating_Profit) / SUM(Units_Sold), 2) AS profit_per_unit
+FROM 
+	Sales
+GROUP BY 
+	Product),
+avg_profit AS
+(SELECT
+	ROUND(AVG(profit_per_unit),2) AS avg_profit_per_unit
+FROM
+	metrics)
+
+SELECT
+	m.Product,
+	m.profit_per_unit,
+	a.avg_profit_per_unit,
+	ROUND(((m.profit_per_unit - a.avg_profit_per_unit) / a.avg_profit_per_unit) * 100 ,2) AS &quot;Difference (Percentage)&quot;,
+	CASE WHEN a.avg_profit_per_unit &gt; m.profit_per_unit THEN 'Below Average' ELSE 'Above Average' END AS Performance
+FROM 
+	metrics AS m
+CROSS JOIN 
+	avg_profit AS a
+ORDER BY 
+	m.profit_per_unit DESC</sql><sql name="Question 6">SELECT
+	Retailer,
+	Product,
+	SUM(Total_Sales) AS &quot;Total Sales&quot;,
+	SUM(Operating_Profit) AS &quot;Operating Profit&quot;
+FROM
+	Sales
+GROUP BY
+	Retailer, Product
+ORDER BY
+	&quot;Total Sales&quot; DESC</sql><sql name="Question 7">WITH metrics AS
+(SELECT
+	Region,
+	SUM(Total_Sales) AS total_region_sales,
+	ROUND(100 * SUM(Operating_Profit) / SUM(Total_Sales), 2) AS region_profit_margin
+FROM 
+	Sales
+GROUP BY 
+	Region),
+region_averages AS
+(SELECT
+	ROUND(AVG(total_region_sales),2) AS avg_region_sales,
+	ROUND(AVG(region_profit_margin),2) AS avg_region_margin
+FROM
+	metrics)
+
+SELECT
+	m.Region,
+	m.total_region_sales,
+	m.region_profit_margin,
+	r.avg_region_sales,
+	r.avg_region_margin,
+	CASE WHEN m.total_region_sales &gt; r.avg_region_sales THEN 'Above Average' ELSE 'Below Average' END AS &quot;Sales Performance&quot;,
+	CASE WHEN m.region_profit_margin &gt; r.avg_region_margin THEN 'Above Average' ELSE 'Below Average' END AS &quot;Profit Margin Performance&quot;,
+	CASE WHEN m.total_region_sales &gt; r.avg_region_sales AND m.region_profit_margin &gt; r.avg_region_margin THEN 'Strong Performer'
+		 WHEN m.total_region_sales &gt; r.avg_region_sales AND m.region_profit_margin &lt; r.avg_region_margin THEN 'High Sales, Low Profitability'
+		 WHEN m.total_region_sales &lt; r.avg_region_sales AND m.region_profit_margin &gt; r.avg_region_margin THEN 'Low Sales, High Profitability'
+		 ELSE 'Weak Performer' END AS Evaluation
+FROM 
+	metrics AS m
+CROSS JOIN 
+	region_averages AS r
+ORDER BY
+    m.total_region_sales DESC</sql><sql name="Question 8">SELECT
+	Sales_Method,
+	ROUND(100 * SUM(Operating_Profit)/SUM(Total_Sales), 2) AS Profit_Margin,
+	SUM(total_sales) AS &quot;Total_Sales&quot;,
+	ROUND((100.0 * SUM(Total_Sales))/(SELECT SUM(Total_Sales) FROM Sales), 2) AS Contribution_Percent
+FROM
+	Sales
+GROUP BY
+	Sales_Method
+ORDER BY
+	Profit_Margin DESC</sql><sql name="Question 9">SELECT
+	strftime('%m', Invoice_Date) AS Month,	
+	SUM(Total_Sales) AS &quot;Total Sales&quot;,
+	SUM(Operating_Profit) AS &quot;Operating Profits&quot;
+FROM
+	Sales
+GROUP BY
+	Month</sql><current_tab id="3"/></tab_sql></sqlb_project>
