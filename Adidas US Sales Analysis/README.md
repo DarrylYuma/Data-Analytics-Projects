@@ -23,11 +23,11 @@ This project investigates what drives sales revenue and profitability for Adidas
 **Product Performance**
 - Men's Street Footwear leads revenue contribution at 23%, while Women's Athletic Footwear trails at 11%. Contribution across the remaining four categories is relatively balanced at 13–19%.
 - The men's/women's revenue split is nearly even at 53/47, suggesting a balanced customer base across both segments.
-- Apparel products consistently outperform footwear in profit per unit — all three below-average categories are footwear.
+- Apparel products consistently outperform footwear in profit per unit, all three below-average categories are footwear.
 
 **Regional Performance**
 - The West leads in revenue ($36.4M) but carries a below-average margin of 35.73%. The Northeast follows a similar pattern at $25M and 38.81%.
-- The South and Midwest are the inverse — lower revenue ($20.6M and $16.6M) but stronger margins at 44.76% and 41.14% respectively.
+- The South and Midwest are the inverse, lower revenue ($20.6M and $16.6M) but stronger margins at 44.76% and 41.14% respectively.
 
 **Retailers and Sales Channels**
 - Sports-focused retailers (Foot Locker, Sports Direct, West Gear) generate over double the revenue and profit of general retailers like Kohl's, Amazon, and Walmart.
@@ -41,7 +41,7 @@ This project investigates what drives sales revenue and profitability for Adidas
 
 ## Recommendations
 
-- Investigate operating cost structures in the West and Northeast — particularly distribution and retailer costs — to bring margins closer to the company average.
+- Investigate operating cost structures in the West and Northeast, particularly distribution and retailer costs to bring margins closer to the company average.
 - Prioritize inventory allocation and marketing toward sports-focused retail partners, and reassess the value of a broad presence in general retail.
 - Continue investing in the online channel through e-commerce improvements and digital marketing, given its leading margin and revenue contribution.
 - Explore apparel-footwear bundling promotions to shift a greater share of sales toward higher-margin products.
@@ -53,11 +53,11 @@ This project investigates what drives sales revenue and profitability for Adidas
 
 The Power BI dashboard includes the following visualizations, all slicer-enabled for filtering by Product, Sales Method, and Month:
 
-- **KPI Cards** — Total Sales, Operating Profit, Profit Margin, and Units Sold with year-over-year deltas
-- **Region Revenue / Margin** — Combo chart of sales volume and profit margin by region
-- **Product Revenue** — Bar chart comparing revenue across all six product categories
-- **Revenue / Profit Timeline** — Dual time-series tracking monthly sales and profit by product
-- **Method Contribution / Margin** — Pie chart breaking down sales channel split across In-store, Online, and Outlet
+- **KPI Cards** - Total Sales, Operating Profit, Profit Margin, and Units Sold with year-over-year deltas
+- **Region Revenue / Margin** - Combo chart of sales volume and profit margin by region
+- **Product Revenue** - Bar chart comparing revenue across all six product categories
+- **Revenue / Profit Timeline** - Dual time-series tracking monthly sales and profit by product
+- **Method Contribution / Margin** - Pie chart breaking down sales channel split across In-store, Online, and Outlet
 
 Below is a preview of the dashboard:
 <img width="1381" alt="Dashboard Image" src="https://github.com/DarrylYuma/Excel-Data-Analysis-Projects/blob/main/Adidas%20US%20Sales%20Analysis/Adidas%20US%20Sales%20Dashboard.png">
