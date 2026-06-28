@@ -1,8 +1,8 @@
 # Adidas US Sales Analysis
 
-An end-to-end data analysis project exploring Adidas sales performance across the United States, using SQL (SQLite) for querying and Power BI for visualization.
+An end-to-end data analysis project exploring Adidas sales performance across the United States, using Excel for data cleaning, SQL (SQLite) for querying and Tableau for visualization.
 
-**Tools:** SQL · SQLite · Tableau &nbsp;
+**Tools:** Excel · SQL · SQLite · Tableau &nbsp;
 
 ---
 
