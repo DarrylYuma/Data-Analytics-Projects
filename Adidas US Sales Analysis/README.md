@@ -76,6 +76,6 @@ Nine SQL queries were written to answer specific business questions, ranging fro
 |---|---|
 | [Dataset](https://www.kaggle.com/datasets/heemalichaudhari/adidas-sales-dataset/data) | Mock dataset from Kaggle |
 | `Adidas.db` | SQLite database |
-| `analysis.sqbpro` | All SQL queries |
+| `Adidas US Sales SQL Queries.sql` | All SQL queries |
 | `Adidas US Sales Analysis.pdf` | Documentation |
 | [Tableau Dashboard](https://public.tableau.com/app/profile/darryl.yuma/viz/AdidasUSSales_17826375574330/DashboardPublic) | Tableau dashboard |
