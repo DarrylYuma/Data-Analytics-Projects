@@ -2,7 +2,8 @@
 Repository for all my Data Analytics Projects.
 # List of Projects
 1. [Adidas US Sales Analysis](https://github.com/DarrylYuma/Data-Analytics-Projects/tree/main/Adidas%20US%20Sales%20Analysis)
-2. [Bike Sales Analysis](https://github.com/DarrylYuma/Excel-Data-Analysis-Projects/tree/main/Bike%20Sales%20Dashboard)
+2. [HR Analysis](https://github.com/DarrylYuma/Data-Analytics-Projects/tree/main/HR%20Analytics)
+3. [Bike Sales Analysis](https://github.com/DarrylYuma/Excel-Data-Analysis-Projects/tree/main/Bike%20Sales%20Dashboard)
 
 ## Adidas US Sales Analysis
 An end-to-end data analysis project exploring Adidas sales performance across the United States, using Excel for data cleaning, SQL (SQLite) for querying and Tableau for visualization.
