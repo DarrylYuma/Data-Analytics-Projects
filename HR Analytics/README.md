@@ -77,7 +77,7 @@ Eight SQL queries were developed to answer business questions related to employe
 | File / Links | Description |
 |---|---|
 | [Dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) | IBM HR Analytics dataset |
-| `HR.db` | SQLite database |
+| `HR DB.db` | SQLite database |
 | `HR SQL Query List.sql` | All SQL queries |
 | `HR SQL Analysis.pdf` | Documentation |
 | `HR Dashboard.pbix` | Power BI dashboard |
