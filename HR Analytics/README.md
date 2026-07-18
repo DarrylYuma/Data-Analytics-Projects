@@ -62,7 +62,7 @@ The Power BI dashboard includes the following visualizations, all slicer-enabled
 
 Below is a preview of the dashboard:
 
-<img width="1381" alt="Dashboard Image" src="https://github.com/DarrylYuma/Data-Analytics-Projects/blob/main/HR%20Analytics/HR%20Analytics%20Dashboard.png">
+<img width="1381" alt="Dashboard Image" src="https://github.com/DarrylYuma/Data-Analytics-Projects/blob/main/HR%20Analytics/HR%20Analytics%20Dashboard%20Preview.png">
 
 ---
 
